@@ -1,0 +1,6 @@
+HOLA
+
+HAS RECIBIDO UN MENSAJE
+Name: {{ name }}
+Email: {{ email }}
+Message: {{ body }}

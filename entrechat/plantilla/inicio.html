@@ -1,0 +1,27 @@
+<header>
+	<nav>
+		<ul>
+			<li><a href='/'>Inicio</a></li>
+			<li><a href='/indumentarias'>Indumentaria</a></li>
+			<li><a href='/calzados'>Calzado</a></li>
+			<li><a href='/contacto'>Contacto</a></li>
+		</ul>
+	</nav>
+</header>
+<section>
+	<h1> ENTRECHAT</h1>
+	<h1> INDUMENTARIA</h1>
+	<p>Actualmente disponemos de Indumentaria para Baile:</p>
+	<ul>
+	{% for dato in Indumentarias %}
+	<li>{{dato.titulo}}</li>
+	{% endfor %}
+	</ul>
+	<h1> CALZADO</h1>
+	<p>Ofrecemos diferentes tipos de calzados de baile:</p>
+	<ul>
+	{% for dato in Calzados %}
+	<li>{{dato.titulo}}</li>
+	{% endfor %}
+	</ul>
+</section>
