@@ -16,5 +16,5 @@ urlpatterns = patterns('',
     url(r'^$','principal.views.inicio'),    
     url(r'^indumentarias/$','principal.views.Indumentarias'), 
     url(r'^calzados/$','principal.views.Calzados'), 
-    url(r'^contact/', include('contact_form.urls'),
+    url(r'^contact/', include('contact_form.urls')),
 )
