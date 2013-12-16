@@ -162,3 +162,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'entrechat.2013@gmail.com'
 EMAIL_HOST_PASSWORD = 'Entrechat2013'
 EMAIL_PORT = 587
+
+try:
+     from settings_local import *
+except ImportError:
+     pass
