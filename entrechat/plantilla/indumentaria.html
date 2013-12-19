@@ -1,24 +1,15 @@
-<style>
-    img { width: 100px; }
-</style>
-<header>
-	<nav>
-		<ul>
-			<li><a href='/'>Inicio</a></li>
-			<li><a href='/indumentarias'>Indumentaria</a></li>
-			<li><a href='/calzados'>Calzado</a></li>
-			<li><a href='/contacto'>Contacto</a></li>
-		</ul>
-	</descripcionheader>
-<section>
+{% extends "base.html" %}
+
+    {% block content %}
 	<h1>TIPO DE INDUMENTARIA</h1>
 	<ul>
 	{% for dato in Indumentarias %}
 		<li>
 			<a href='/indumentaria/{{dato.id}}'>{{dato.titulo}}</a><br>
 			<li>Descripcion: {{dato.descripcion}}</li><br>
-			<img src= '{{MEDIA_URL}}{{dato.imagen}}'>
+			<img src='/media/{{dato.imagen}}'>
 		</li>
 		{% endfor %}
 	</ul>
 </section>
+	{% endblock %}
