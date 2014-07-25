@@ -110,7 +110,7 @@ ROOT_URLCONF = 'entrechat.urls'
 WSGI_APPLICATION = 'entrechat.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(RUTA_PROYECTO,'/home/fmorales/entrechat/entrechat/plantilla'),
+#    os.path.join(RUTA_PROYECTO,'/home/fmorales/entrechat/entrechat/plantilla'),
     os.path.join(BASE_DIR, 'entrechat', 'plantilla'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
