@@ -1,15 +1,29 @@
 {% extends "base.html" %}
+{% block content %}
+    <div id="tipo-calzado" class="container">
+      <h1>Tipo de indumentaria</h1>
+    	<ul>
+        {% for dato in Indumentarias %}
+    		<li class="list-unstyled">
+          <div class="row">
+            <div class="col-sm-6">
+              <img class="img-responsive" src="/media/{{dato.imagen}}">
+            </div>
+            <div class="col-sm-6">
+              <!--a href="/indumentaria/{{dato.id}}">{{dato.titulo}}</a-->
+              <h2>{{dato.titulo}}</h2>
+              <hr>
+              <p>
+              <span>Descripcion: {{dato.descripcion|safe}}</span>
+              </p>
+              <p>
+                  <span>Color: {{dato.color}}</span>
+              </p>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+    	</ul>
 
-    {% block content %}
-	<h1>TIPO DE INDUMENTARIA</h1>
-	<ul>
-	{% for dato in Indumentarias %}
-		<li>
-			<a href='/indumentaria/{{dato.id}}'>{{dato.titulo}}</a><br>
-			<li>Descripcion: {{dato.descripcion}}</li><br>
-			<img src='/media/{{dato.imagen}}'>
-		</li>
-		{% endfor %}
-	</ul>
-</section>
-	{% endblock %}
+    </div>
+{% endblock %}

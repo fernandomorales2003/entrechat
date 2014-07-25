@@ -10,11 +10,12 @@ def inicio(request):
 	Indumentarias = Indumentaria.objects.all()
 	Calzados = Calzado.objects.all()
 	return render_to_response('inicio.html',{'Indumentarias':Indumentarias,'Calzados':Calzados})
-def Indumentarias (request):
+
+def indumentarias (request):
 	Indumentarias = Indumentaria.objects.all()
 	return render_to_response('indumentaria.html',{'Indumentarias':Indumentarias})
 
-def Calzados(request):
+def calzados(request):
 	Calzados = Calzado.objects.all()
 	return render_to_response('calzado.html',{'Calzados':Calzados})
 
@@ -24,11 +25,10 @@ def Calzados(request):
 #		if formulario.is.valid():
 #			titulo = 'Mensaje desde WEB ENTRECHAT'
 #			contenido = formulario.cleaned_data['mensaje'] + "\n"
-#			contenido += 'Comunicarse a: ' + formulario.cleaned_data['correo'] 
+#			contenido += 'Comunicarse a: ' + formulario.cleaned_data['correo']
 #			correo = EmailMessage(titulo,contenido,to = [entrechat.2013@gmail])
 #			correo.send()
 #			return HttpResponseRedirect('/')
 #	else:
 #		formulario = ContactoForm()
 #	return render_to_response('contactoform.html',{'formulario':formulario},context_instance=RequestContext(request)
-		
